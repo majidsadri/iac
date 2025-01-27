@@ -55,6 +55,7 @@ iac-project/
 ├── README.md                  # Documentation for the project
 ├── terraform.tfvars           # Global variable values (if any)
 └── versions.tf                # Terraform version and provider requirements
+```
 
 ---
 
