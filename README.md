@@ -56,16 +56,19 @@ iac-project/
 ├── terraform.tfvars           # Global variable values (if any)
 └── versions.tf                # Terraform version and provider requirements
 
-
+---
 ## Using Terraform Workspaces
 
 Terraform workspaces are used to manage multiple environments (e.g., development, staging, production) within a single codebase.
+
+---
 
 ## Key Benefits
 Isolated state files per environment.
 Simplified management of shared resources.
 Enhanced collaboration for teams.
 
+---
 ## Workspace Setup
 The deployment script (deploy.sh) automates the workspace selection or creation.
 
