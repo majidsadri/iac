@@ -75,19 +75,20 @@ Enhanced collaboration for teams.
 ## Workspace Setup
 The deployment script (deploy.sh) automates the workspace selection or creation.
 
-### List existing workspaces:
+- ** List existing workspaces:
 terraform workspace list
-### Create or select a workspace:
+- ** Create or select a workspace:
 terraform workspace select development || terraform workspace new development
-### Workspace-specific state files:
+- ** Workspace-specific state files:
 The state file for each workspace is stored in an S3 bucket under:
 
 s3://willow-terraform-states-bucket/iac-project/<workspace>/terraform.tfstate
-State File Management
+
+## State File Management
 
 Terraform state files are essential for tracking the current state of the infrastructure.
 
-Backend Configuration
+### Backend Configuration
 The backend is configured in the backend.tf file for each environment. It uses:
 
 S3 Bucket: Stores the Terraform state files.
@@ -103,11 +104,12 @@ terraform {
     encrypt        = true
   }
 }
-Deployment Process
+
+## Deployment Process
 
 Use the deploy.sh script to initialize, plan, and apply changes to the desired environment.
 
-Steps to Deploy
+### Steps to Deploy
 Run the deployment script for the desired environment:
 ./deploy.sh <environment>
 Replace <environment> with development, staging, or production.
